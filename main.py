@@ -37,7 +37,23 @@ number = st.number_input("Number of tweets to generate:", min_value=1, max_value
 if st.button("Generate Tweets"):
     tweets = tweet_chain.invoke({"number" : number, "topic" : topic})
     st.write(tweets.content)
-# To run the app, use the command: streamlit run main.py
+
+st.markdown("---")
+
+st.markdown(
+    """
+    <div style="text-align: center; color: grey; font-size: 14px;">
+        🚀 Built by <b>Sahil Jain</b><br>
+        <a href="https://www.linkedin.com/in/sahils007in/" target="_blank">
+            🔗 LinkedIn Profile
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
 
 
 
